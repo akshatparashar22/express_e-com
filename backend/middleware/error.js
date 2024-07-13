@@ -9,7 +9,7 @@ module.exports = (err, req ,res,next) => {
         error: err
     })
 
-    //Wrong MongoDb Id Error
+    //Handling Wrong MongoDb Id Error - Cast Error
     if (err.name === "CastError"){
     const message = `Resource not Found ${err.path}`;
     err = new ErrorHandler(message, 400);

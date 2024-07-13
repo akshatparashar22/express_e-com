@@ -48,8 +48,15 @@ exports.deleteProduct = catchAsycError (async (req, res, next) => {
 
 exports.getAllProducts = catchAsycError (async (req,res) => {
 
+    const resultPerPage = 5;
+    const productCount = await Product.countDocuments();
+
     //For search
-    const apiFeature = new ApiFeatures(Product.find(),req.query).search();
+    const apiFeature = new ApiFeatures(Product.find(),req.query)
+    .search()
+    .filter()
+    .pagination(resultPerPage);
+
     const products = await apiFeature.query;
     
     res.status(200).json({
