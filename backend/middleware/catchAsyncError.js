@@ -1,6 +1,7 @@
-module.exports = catchAsycError => (req,res,next) => {
-    Promise.resolve(catchAsycError(req,res,next))
-    .catch(next => {
-        console.log("error caught=>", next);
+module.exports = catchAsyncError => (req,res,next) => {
+    Promise.resolve(catchAsyncError(req,res,next))
+    .catch(error => {
+        console.log("error caught=>", error);
+        next(error)
     })
 }
