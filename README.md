@@ -1,2 +1,2 @@
 # shadenium
-Website for an online garden e-commerce
+Backend for an online garden e-commerce
