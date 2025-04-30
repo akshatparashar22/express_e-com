@@ -1,2 +1,2 @@
-# shadenium
-Backend for an online garden e-commerce
+# Express E-com
+E-commerce backend server with mongodb database(mongoose) made in express + JavaScript
