@@ -1,0 +1,27 @@
+{
+  "name": "shadenium",
+  "version": "1.0.0",
+  "description": "shadenium website",
+  "main": "backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshatparashar22/shadenium.git"
+  },
+  "author": "Akshat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshatparashar22/shadenium/issues"
+  },
+  "homepage": "https://github.com/akshatparashar22/shadenium#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.2"
+  }
+}
